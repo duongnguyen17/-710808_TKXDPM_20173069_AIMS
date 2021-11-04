@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <ImageView fx:id="logo" fitHeight="150.0" fitWidth="200.0" layoutX="594.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../assets/images/Logo.png" />
+            </image>
+        </ImageView>
+        <Label layoutX="525.0" layoutY="382.0" prefHeight="115.0" prefWidth="316.0" text="DuongNV20173069-AIMS" textAlignment="CENTER" textFill="#5091e6">
+            <font>
+                <Font name="Segoe UI Semibold" size="24.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
