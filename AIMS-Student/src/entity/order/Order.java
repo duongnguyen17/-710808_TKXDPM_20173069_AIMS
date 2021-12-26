@@ -1,6 +1,7 @@
 package entity.order;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 
@@ -11,6 +12,32 @@ public class Order {
     private int shippingFees;
     private List lstOrderMedia;
     private HashMap<String, String> deliveryInfo;
+    /**
+     * if this is rush order
+     */
+    private boolean isRush;
+    public boolean isRush(){
+        return isRush;
+    }
+
+    public void setRush(boolean rush){
+        isRush = rush;
+    }
+
+    /**
+     * rush info if this is rush order
+     */
+    private RushInfo rushInfo;
+
+    public RushInfo getRushInfo(){
+        return rushInfo;
+    }
+
+    public void setRushInfo(RushInfo rushInfo){
+        this.rushInfo = rushInfo;
+    }
+
+
 
     public Order(){
         this.lstOrderMedia = new ArrayList<>();
