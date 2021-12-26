@@ -15,6 +15,7 @@ import common.exception.InvalidDeliveryInfoException;
 import entity.invoice.Invoice;
 import entity.order.Order;
 import entity.order.OrderMedia;
+import entity.order.RushInfo;
 import views.screen.popup.PopupScreen;
 
 /**
@@ -135,5 +136,14 @@ public class PlaceOrderController extends BaseController{
         int fees = (int)( ( (rand.nextFloat()*10)/100 ) * order.getAmount() );
         LOGGER.info("Order Amount: " + order.getAmount() + " -- Shipping Fees: " + fees);
         return fees;
+    }
+    
+    /**
+     * add rush info to order
+     * @param order order to rush
+     * @param rushInfo rush info
+     */
+    public void addRushInfo(Order order, RushInfo rushInfo){
+        order.setRushInfo(rushInfo);
     }
 }

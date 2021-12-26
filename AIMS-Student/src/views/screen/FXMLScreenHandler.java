@@ -7,20 +7,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 
 public class FXMLScreenHandler {
 
 	protected FXMLLoader loader;
-	protected AnchorPane content;
+	protected Pane content;
 
 	public FXMLScreenHandler(String screenPath) throws IOException {
 		this.loader = new FXMLLoader(getClass().getResource(screenPath));
 		// Set this class as the controller
 		this.loader.setController(this);
-		this.content = (AnchorPane) loader.load();
+		this.content = loader.load();
 	}
 
-	public AnchorPane getContent() {
+	public Pane getContent() {
 		return this.content;
 	}
 
